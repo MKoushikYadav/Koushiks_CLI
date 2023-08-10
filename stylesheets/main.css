@@ -1,0 +1,51 @@
+.cmdbox{
+    padding: 2vw;
+    color: greenyellow;
+    height: 80vh;
+    border: 1px solid greenyellow;
+}
+
+
+/**/
+.cmdarea,.cmdAreaEntered{
+    color:greenyellow;
+    font-family: 'Consolas';
+    height:3vh;
+    border:none;
+    width:auto;
+    font-size: 2.5vh;
+}  
+
+.cmdAreaEntered{
+    margin: 0;
+}
+
+.cmdarea{
+    width:80%;
+}
+#Begin{
+    color:greenyellow;
+    font-family: 'Consolas';
+    text-align: start;
+    font-weight: bold;
+    font-size: 2.5vh;
+    flex-grow: 10;
+}
+
+#flex{
+    display:flex;
+}
+.cmdarea:focus{
+    outline:none;
+}
+.cmdarea::placeholder{
+    color:greenyellow;
+    font-family: 'Consolas';
+    text-align: start;
+    font-weight: bold;
+    font-size: 2.5vh;
+}
+    
+* {
+    background-color:black;
+}
