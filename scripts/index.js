@@ -1,20 +1,19 @@
 //Text Replies for a few commands:
-const help =
-"\
+const help ="\
 <b>Welcome to Koushik's CLI</b><br>\
 For more help on a command, type 'command name' help.<br>\
-ls - Display the available applications<br>\
-run - Run the application in either modern or CLIish look<br>\
-clear - clear the terminal<br>\
-clearscreen - same as 'clear'<br>\
-cls - same as 'clear'\
+<b>ls</b> - Display the available applications<br>\
+<b>run</b> - Run the application in either modern or CLIish look<br>\
+<b>clear</b>- clear the terminal<br>\
+<b>clearscreen</b> - same as 'clear'<br>\
+<b>cls</b> - same as 'clear'\
 "
 
 
 
 // This function initializes the input box i.e the command line.
 function getcmd() 
-{ cmd = document.getElementsByClassName("cmdarea")[0];
+{ cmd = document.getElementsByClassName("inputBox")[0];
 return cmd;
 }
 
@@ -23,25 +22,25 @@ function processCommand(event){
     if (event.key==='Enter' && cmd.value.trim()!='') {
         event.preventDefault(); // Prevent the default behavior (form submission, line break, etc.)
         let text = cmd.value;
-        logCommand(text);
+        setTimeout(logCommand(text),200);
         runCommand(text);
     }   
 }
 
-/* This function logs the commands on screen i.e creates an paragraph element with class cmdAreaEntered and is inserted before the flex div i.e
+/* This function logs the commands on screen i.e creates an paragraph element with class cmdEntered and is inserted before the flex div i.e
  the text input. */
-function logCommand(text,prefix='>') {
-    let entered = document.createElement('p');
-    entered.classList.add('cmdAreaEntered');
+ function logCommand(text,prefix='>') {
+    let entered = document.createElement('div');
+    entered.classList.add('cmdEntered');
     entered.textContent = prefix + text;
-    document.getElementById('flex').before(entered);
+    document.getElementById('in').before(entered);
     cmd.value = '';
     cmd.placeholder = '';
 }
 
 
-// This function clears the screen that is removes all nodes of class cmdAreaEntered.
-function clear() {elements=document.getElementsByClassName('cmdAreaEntered');
+// This function clears the screen that is removes all nodes of class cmdEntered.
+function clear() {elements=document.getElementsByClassName('cmdEntered');
         [...elements].forEach((element) => {
             element.remove();
         });}
@@ -57,10 +56,12 @@ function runCommand(text){
         break;
         // if help is entered, a list of commands that can be entered are shown.
         case "help":
-            let entered = document.createElement('p');
-            entered.classList.add('cmdAreaEntered');
+            let a=document.getElementById('in');
+            let entered = document.createElement('div');
+            entered.classList.add('cmdEntered');
+            entered.classList.add('c')
             entered.innerHTML = help;
-            document.getElementById('flex').before(entered);
+            a.before(entered);
             cmd.value = '';
             cmd.placeholder = '';
             break;

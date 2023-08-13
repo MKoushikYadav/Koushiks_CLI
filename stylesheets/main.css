@@ -1,28 +1,30 @@
 .cmdbox{
     padding: 2vw;
+    margin: 6vh 0;
     color: greenyellow;
-    height: 80vh;
+    min-height: 80vh;
     border: 1px solid greenyellow;
 }
+.cmdEntered{
+    word-wrap: break-word;
+}
 
-
-/**/
-.cmdarea,.cmdAreaEntered{
+.inputBox,.cmdEntered{
     color:greenyellow;
     font-family: 'Consolas';
-    height:3vh;
+    min-height:3vh;
+    height: auto;
     border:none;
     width:auto;
     font-size: 2.5vh;
 }  
 
-.cmdAreaEntered{
-    margin: 0;
+
+.inputBox{
+    min-width:80%;
+    overflow:scroll;
 }
 
-.cmdarea{
-    width:80%;
-}
 #Begin{
     color:greenyellow;
     font-family: 'Consolas';
@@ -32,13 +34,11 @@
     flex-grow: 10;
 }
 
-#flex{
-    display:flex;
-}
-.cmdarea:focus{
+.inputBox:focus{
     outline:none;
 }
-.cmdarea::placeholder{
+
+.inputBox::placeholder{
     color:greenyellow;
     font-family: 'Consolas';
     text-align: start;
