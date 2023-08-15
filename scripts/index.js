@@ -4,11 +4,14 @@ const help ="\
 For more help on a command, type 'command name' help.<br>\
 <b>ls</b> - Display the available applications<br>\
 <b>run</b> - Run the application in either modern or CLIish look<br>\
-<b>clear</b>- clear the terminal<br>\
-<b>clearscreen</b> - same as 'clear'<br>\
-<b>cls</b> - same as 'clear'\
+<b>clear</b>- clear the terminal [Same as 'cls','clearscreen']<br>\
 "
-
+const apps = "\
+<b>Use run 'App Name' to run app</b><br>\
+<b>resume.exe</b> - <br>\
+<b>run</b> - Run the application in either modern or CLIish look<br>\
+<b>clear</b>- clear the terminal [Same as 'cls','clearscreen']<br>\
+"
 
 
 // This function initializes the input box i.e the command line.
@@ -56,20 +59,25 @@ function runCommand(text){
         break;
         // if help is entered, a list of commands that can be entered are shown.
         case "help":
-            let a=document.getElementById('in');
-            let entered = document.createElement('div');
-            entered.classList.add('cmdEntered');
-            entered.classList.add('c')
-            entered.innerHTML = help;
-            a.before(entered);
-            cmd.value = '';
-            cmd.placeholder = '';
+            displayResult(help);
             break;
-        case "ls":
+        case "ls": 
+            displayResult(apps);
             
             break;
         default:
         break;
+    }
+
+    function displayResult(val) {
+        let a = document.getElementById('in');
+        let entered = document.createElement('div');
+        entered.classList.add('cmdEntered');
+        entered.classList.add('c');
+        entered.innerHTML = val;
+        a.before(entered);
+        cmd.value = '';
+        cmd.placeholder = '';
     }
 }
 

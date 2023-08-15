@@ -5,9 +5,7 @@
     min-height: 80vh;
     border: 1px solid greenyellow;
 }
-.cmdEntered{
-    word-wrap: break-word;
-}
+
 
 .inputBox,.cmdEntered{
     color:greenyellow;
@@ -18,7 +16,10 @@
     width:auto;
     font-size: 2.5vh;
 }  
-
+.cmdEntered{
+    word-wrap: break-word;
+    line-height: 3vh;
+}
 
 .inputBox{
     min-width:80%;
