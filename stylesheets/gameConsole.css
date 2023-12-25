@@ -1,0 +1,40 @@
+.gameBar{
+border: 1px solid greenyellow;
+margin:5vh auto 10vh auto;
+display:flex;
+flex-wrap: wrap;
+}
+
+.gameConsole .back{
+    margin:auto;
+    -webkit-user-select: none; /* Safari */
+    user-select: none;
+    border:1px solid white;
+    min-width:42px;
+    text-align: center;
+    width:4vw;
+}   
+
+.gameConsole .gameScreen{
+    margin:auto;
+    margin-bottom:10vh;
+    width:90%;
+    min-height: 40%;
+    height:auto;
+    padding: 6vh 1px;
+    border: 1px solid greenyellow;
+}
+
+.gameConsole .game{
+-webkit-user-select: none; /* Safari */
+user-select: none;
+flex-grow: 1;
+text-align: center;
+width:20%;
+height:10vh;
+border-right:1px solid greenyellow;
+}
+
+.gameConsole .dinoGame{
+    background: url('../dino.png') no-repeat center/8vh;
+}

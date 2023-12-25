@@ -1,0 +1,70 @@
+
+div.screen{
+    color:greenyellow;
+    display:flex;
+    height:auto;
+    margin:auto;
+    justify-content: center;
+    align-content: center;
+    flex-wrap:wrap;
+    padding: 6vh 2vw;
+    min-height: 25vh;
+    border:3px dashed greenyellow;
+    font-size:4vh;
+}
+.screen a{
+    color:greenyellow;
+}
+a#email{
+    color:rgb(207,61,49);
+
+}
+a#linkedin{
+    color:rgb(10,102,194);
+
+}
+.screen a:active{
+    animation: keypress 0.1s ease-out 1;
+}
+div.keyboard{
+    height:auto;
+    display:flex;
+    flex-wrap: wrap;
+    -webkit-user-select: none;
+    user-select: none;
+    border:1px solid yellow;
+}
+
+div.key{
+    flex-grow: 1;
+    flex-basis: 33%;
+    border:1px solid yellow;
+    min-height:42px;
+    transition: opacity 1s ease-in-out;
+}
+
+div.Projects{
+    flex-basis:65%;
+}
+
+div.Certifications{
+    flex-basis:60%;
+}
+
+div.DontPress{
+color:red;
+}
+
+.knowMore .Back{
+    flex-basis:100%;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    div.keyboard{
+        width:40%;
+        margin:6vh auto;
+    }
+
+}
