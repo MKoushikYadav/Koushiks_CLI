@@ -1,0 +1,90 @@
+.dialogBoxGroup {
+  width: auto;
+}
+
+.dialogBox {
+  position: relative;
+  border: 5px solid rgba(29, 114, 243, 255);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  width: max(235px, 20%);
+  height: auto;
+}
+
+.dialogBox{
+  cursor: default;
+}
+
+.dialogBox *{
+  -webkit-user-select: none;
+  user-select: none;  
+}
+
+.titleBar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  align-content: center;
+  height: 4vh;
+  background-color: rgba(29, 114, 243, 255);
+}
+.titleBar * {
+  background-color: rgba(29, 114, 243, 255);
+}
+.titleBarText {
+  color: white;
+  font-family: "Sans MS";
+  line-height: 1;
+  font-weight: bolder;
+  font-size: clamp(17px, 2vh, 3vh);
+  padding:3px;
+}
+
+.titleBarButtons {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.titleBarButton {
+  border: 1px solid rgba(191, 245, 255, 255);
+  border-radius: 2px;
+  width:auto;
+  height:auto;
+}
+.close {
+  background: url("../assets/icons/xpToolbar.ico") -51px -25px;
+  background-size: 71px;
+}
+.minimize {
+  background: url("../assets/icons/xpToolbar.ico") -1px -25px;
+  background-size: 71px;
+}
+
+.maximize {
+  background: url("../assets/icons/xpToolbar.ico") -26px -25px;
+  background-size: 71px;
+
+}
+
+.dialogBoxContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 92%;
+}
+
+.projectImg {
+  width: 80%;
+  height: 50%;
+  flex-basis: 50%;
+  border-radius: 10px;
+  -webkit-user-drag: none;
+}
+.projectDesc {
+  height: auto;
+  width: 100%;
+  flex-grow: 1;
+  font-weight: bold;
+  text-align: center;
+}

@@ -1,9 +1,17 @@
+@font-face {
+  font-family: "FreePixel";
+  src: url(../assets/fonts/FreePixel.ttf);
+  format: "truetype";
+}
+
 *{
   color:greenyellow;
   background-color: black;
-  font-family:"Consolas"
+  font-family:"Consolas";
+  box-sizing: border-box;
+  line-height: 1.3;
+  font-size:clamp(15px,2.5vh,4vh);
 }
-
 .cmdbox {
   padding: 2vw;
   margin: 6vh 0;
@@ -16,19 +24,20 @@
   color: greenyellow;
   text-align: center;
   font-weight: bold;
-  font-size: 3vh;
 }
 
 .knowMore {
   color: rgb(201, 201, 72);
   text-align: center;
   font-weight: bold;
-  font-size: 3vh;
   display: none;
   height: auto;
   width: 80%;
   margin: auto;
   border-top: none;
+}
+.gameConsole{
+  display: none;
 }
 
 .inputBox,
@@ -38,11 +47,11 @@
   height: auto;
   border: none;
   width: auto;
-  font-size: 2.5vh;
 }
 .cmdEntered {
   word-wrap: break-word;
   line-height: 3vh;
+  margin-bottom: 1vh;
 }
 
 .inputBox {
@@ -50,12 +59,11 @@
   overflow: scroll;
 }
 
-#Begin {
+#cmdlinePrefix {
   color: greenyellow;
   text-align: start;
   font-weight: bold;
-  font-size: 2.5vh;
-  flex-grow: 10;
+  display: inline-block;
 }
 
 .inputBox:focus {
@@ -66,7 +74,6 @@
   color: greenyellow;
   text-align: start;
   font-weight: bold;
-  font-size: 2.5vh;
 }
 .button:active{
   animation: keypress 0.1s ease-out 1;
@@ -78,8 +85,4 @@
 @keyframes keypress {
   from{transform: scale(1);}
   to{transform:scale(0.99);}
-}
-
-* {
-  background-color: black;
 }

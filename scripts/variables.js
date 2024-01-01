@@ -2,9 +2,9 @@
 let keyOutputs = {
     About: "A Student that spends a lot of his time on his computer.<br> Tech and Anime Enthusiast.",
     Projects: "I have made a few projects. You can find them on my github page.",
-    Experience: "Areteans Technologies(10/23-11/23) - Developer Intern<br>\
-    REJOLT EDTECH PVT LTD (05/2022-05/2023) - Student Fellow<br>\
-    AIESEC in Hyderabad (08/2022 - 07/2023) - Marketing Team Leader",
+    Experience: "Areteans Technologies(Oct 2023- Nov 2023) - Developer Intern<br>\
+    REJOLT EDTECH PVT LTD (May 2022-May 2023) - Student Fellow<br>\
+    AIESEC in Hyderabad (Aug 2022 - July 2023) - Marketing Team Leader",
     Education: "Vardhaman College of Engineering Hyderabad 2020-24<br>\
     B.Tech, Computer Science and Engineering<br><br>\
     The Hyderabad Public School, Begumpet Hyderabad 2018-20<br>\
@@ -33,17 +33,17 @@ let facts = [
 //Help Dialog Text
 const helpDialog ="\
 <b>Welcome to Koushik's CLI</b><br>\
-<b>ls</b> - Display the available applications<br>\
-<b>run</b> - Run the application in either modern or CLIish look<br>\
-<b>clear</b>- clear the terminal [Same as 'cls','clearscreen']<br>\
+<b>ls</b> -&nbsp&nbsp&nbsp&nbspDisplay the available applications<br>\
+<b>run</b> -  &nbsp&nbspRun the application in either modern or CLIish look<br>\
+<b>clear</b>- &nbspclear the terminal [Same as 'cls','clearscreen']<br><br>\
 For more help on a command, type 'command name' help.<br>\
 ";
 
 // Application List
 const appList = "\
 <b>Use run 'App Name' to run app</b><br>\
-<b>KnowMore.exe</b> - Display a GUI for interacting with me. <br>\
-<b>gamebar.exe</b><br>\
-<b>-legacy or -modern option</b> Run application in legacy or modern look<br>\
+<b>KnowMore.exe || knowmore</b> - Display a GUI for interacting with me. <br>\
+<b>gameConsole.exe< || gameconsole</b> - How would you like to play some games?<br>\
+<b>ProjectViewer.exe || projectviewer</b> - Check out my Other Projects:)<br>\
 ";
 

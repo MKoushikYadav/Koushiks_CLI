@@ -1,40 +1,53 @@
-.gameBar{
-border: 1px solid greenyellow;
-margin:5vh auto 10vh auto;
-display:flex;
-flex-wrap: wrap;
+.gameBar {
+  position: relative;
+  border: 1px solid greenyellow;
+  margin: 5vh auto 10vh auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  min-height: 10vh;
 }
 
-.gameConsole .back{
-    margin:auto;
-    -webkit-user-select: none; /* Safari */
-    user-select: none;
-    border:1px solid white;
-    min-width:42px;
-    text-align: center;
-    width:4vw;
-}   
-
-.gameConsole .gameScreen{
-    margin:auto;
-    margin-bottom:10vh;
-    width:90%;
-    min-height: 40%;
-    height:auto;
-    padding: 6vh 1px;
-    border: 1px solid greenyellow;
+.gameConsole .back {
+  margin: auto;
+  -webkit-user-select: none; /* Safari */
+  user-select: none;
+  border: 1px solid white;
+  min-width: 42px;
+  text-align: center;
+  width: 4vw;
 }
 
-.gameConsole .game{
--webkit-user-select: none; /* Safari */
-user-select: none;
-flex-grow: 1;
-text-align: center;
-width:20%;
-height:10vh;
-border-right:1px solid greenyellow;
+.gameConsole .gameScreen {
+  width: 600px;
+  height: 200px;
+  margin: auto;
+  margin-bottom: 10vh;
+  width: 90%;
+  min-height: 40%;
+  height: auto;
+  padding: 6vh 1px;
+  border: 1px solid greenyellow;
+  text-align: center;
+  font-size: 3vh;
 }
 
-.gameConsole .dinoGame{
-    background: url('../dino.png') no-repeat center/8vh;
+.gameConsole .game {
+  -webkit-user-select: none; /* Safari */
+  user-select: none;
+  flex-grow: 1;
+  text-align: center;
+  width: 20%;
+  height: inherit;
+  border-right: 1px solid greenyellow;
+}
+
+.gameConsole .dinoGame {
+  background: url("../dinoGame/dino.png") no-repeat center/contain;
+}
+
+h1 {
+  margin: auto;
+  text-align: center;
+  font-size: 8vh;
 }

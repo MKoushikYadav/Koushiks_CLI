@@ -12,6 +12,7 @@ function clear() {elements=document.getElementsByClassName('cmdEntered');
         });}
 
 
+
 /**This function processes the commands by listening to the input.*/    
 function runCommand(text){
     text =text;
@@ -33,9 +34,11 @@ function runCommand(text){
             runApp(split[1]);
 
         default:
+            displayResult("<b>Command not found. Please use \"help\" to check list of commands.</b>");
         break;
     }
 }
+
 
 
 /**This function logs the output on screen i.e creates an div element with class cmdEntered. */
@@ -67,14 +70,22 @@ function runApp(app,mode="legacy"){
                 //future implementation
             }
             break;
+
+        case "projectviewer": case "projectviewer.exe":
+            displayResult("Running "+"Project Viewer",html=false);
+            loadContent("projectViewer");
+            break;
+            
         case "gameconsole.exe":case "gameconsole":
             displayResult("Running "+"gameConsole",html=false);
             loadContent("gameConsole");
         default:
-            displayResult("App not found. Please use \"ls\" to check list of apps.")
+            displayResult("<b>App not found. Please use \"ls\" to check list of apps.</b>")
             break;
     }
 }
+
+
 
 
 /**This function logs the commands on screen i.e creates an paragraph element with class cmdEntered and is inserted before the flex div i.e
